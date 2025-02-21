@@ -1,4 +1,4 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { Inter } from 'next/font/google'
 import '../globals.css'
 export const metadata = {
@@ -16,14 +16,13 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider afterSignOutUrl={"/"}>
       <html lang="en">
-        <body
-          className={`${inter.className} bg-dark-1`}
-        >
+        <body className={`${inter.className} bg-gray-950`}>
           {children}
         </body>
-      </html> 
+      </html>
     </ClerkProvider>
   );
 }
+

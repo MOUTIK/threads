@@ -1,11 +1,12 @@
-import React from 'react'
+import { UserButton } from "@clerk/nextjs";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>Page</h1>
-    </div>
-  )
+    <>
+      <h1 className="head-text text-left">
+        Welcome to Threads!
+      </h1>
+    </>
+  );
 }
-
-export default page
+// 1:45:22
